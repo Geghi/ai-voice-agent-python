@@ -182,7 +182,6 @@ async def entrypoint(ctx: JobContext):
     if local_participant and local_participant.metadata:
         language = _on_participant_connected(local_participant)
 
-    # Process remote participants
     for participant in ctx.room.remote_participants.values():
         language = _on_participant_connected(participant)
 
